@@ -32,6 +32,13 @@ void Warlock::introduce() const
 
 void Warlock::learnSpell(ASpell *spell)
 {
+	for (std::vector<ASpell*>::iterator it = slot.begin(); it != slot.end(); it++)
+	{
+		if ((*it)->getName() == spell->getName())
+		{
+			return ;
+		}
+	}
 	slot.push_back(spell->clone());
 }
 
