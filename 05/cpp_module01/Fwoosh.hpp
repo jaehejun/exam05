@@ -3,19 +3,16 @@
 
 #include "ASpell.hpp"
 
-class ASpell;
-
 class Fwoosh : public ASpell
 {
-	private:
-
 	public:
 		Fwoosh();
-		virtual ~Fwoosh();
+		~Fwoosh();
 		Fwoosh(const Fwoosh &other);
 		Fwoosh &operator=(const Fwoosh &other);
 
 		virtual Fwoosh *clone() const;
+
 };
 
 #endif
